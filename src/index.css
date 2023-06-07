@@ -1,0 +1,105 @@
+body 
+{
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: black;
+}
+
+.leaflet-container
+{
+    background-color: black;
+}
+
+#map
+{
+    height: 90vh;
+    width: 100%;
+
+}
+
+#options
+{
+    border-style: dashed;
+    border-color: white;
+    height: 600px;
+}
+
+#closebtn
+{
+    margin-left: auto;
+}
+
+.sidebar 
+{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.1s;
+    padding-top: 15px
+
+}
+
+.sidebar a 
+{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.1s;
+}
+
+.sidebar a:hover 
+{
+    color: #f1f1f1;
+}
+
+.sidebar .close 
+{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.open 
+{
+    font-size: 10px;
+    cursor: pointer;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+}
+
+.open:hover 
+{
+    background-color: #444;
+}
+
+#content 
+{
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-width: 500px) 
+{
+    .sidebar 
+    {
+        padding-top: 15px;
+    }
+    .sidebar a 
+    {
+        font-size: 18px;
+    }
+}

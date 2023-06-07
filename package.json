@@ -1,0 +1,13 @@
+{
+  "name": "smtv-interactive-map",
+  "version": "1.0.0",
+  "description": "A Shin Megami Tensei V Interactive Map",
+  "main": "page.js",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.22.1"
+  }
+}
