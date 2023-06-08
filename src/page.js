@@ -43,5 +43,5 @@ var map = L.map('map').fitWorld();
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '©SEGA ©ATLUS'
+    attribution: '<a href="https://sega.co.jp/">©SEGA</a> <a href="https://www.atlus.co.jp/">©ATLUS</a>'
 }).addTo(map);

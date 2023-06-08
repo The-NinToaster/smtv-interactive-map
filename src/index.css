@@ -14,9 +14,14 @@ body
 
 #map
 {
-    height: 90vh;
+    height: 85vh;
     width: 100%;
+}
 
+#map-box
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #options
