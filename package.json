@@ -2,7 +2,7 @@
   "name": "smtv-interactive-map",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://www.thenintoaster.com/smtv-interactive-map",
+  "homepage": "https://smtv-interactive-map.thenintoaster.com",
   "scripts": {
     "start": "node ./bin/www",
     "startdev": "npm run build & nodemon ./bin/www",
