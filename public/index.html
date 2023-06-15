@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+        <link rel="stylesheet" href="stylesheets/index.css">
+        <link rel="stylesheet" href="stylesheets/leaflet.css">
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+        <link rel="manifest" href="../site.webmanifest">
+
+    </head>
+    <title>Shin Megami Tensei V Map</title>
+    <body>
+        <div id="sidebar" class="sidebar">
+            <div id="openalt" align="right" style="padding-right: 10px;"></div>
+            <div align="center">
+                <div>
+                    <img id="title" alt="Shin Megami Tensei V Interactive Map" src="images/title_small.png">
+                </div>
+                <div id="options">
+                    <label>Map:</label>
+                    <select name="place" id="place">
+                        <option value="minato">Da'at Minato</option>
+                        <option value="chiyoda">Da'at Chiyoda</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <button id="open" class="open" onclick="toggleNav()">☰ Options</button>
+            <p style="display: inline">THIS IS A WORK IN PROGRESS</p>
+            <div align="center">
+                <div style="display: inline"id="placename">
+                    <img height="40px" class="name"/>
+                </div>
+            </div>
+            <div id="map-box">
+                <div id="map"></div>
+                <script src="/javascripts/map.js"></script>
+            </div>
+            <div id="footer" align="center">
+                    <div>
+                    <a style="font-size:smaller" href="https://github.com/The-NinToaster/smtv-interactive-map">Made with ♥️ by The-NinToaster</a>
+                    </div>
+        </div>
+    </body>
+    <script src="/javascripts/page.js"></script>
+</html>
+
+

@@ -6,6 +6,10 @@ body
     color: white;
     background-color: black;
 }
+a
+{
+    color: limegreen;
+}
 
 .leaflet-container
 {
@@ -16,19 +20,18 @@ body
 {
     height: 85vh;
     width: 100%;
+    background-color: black;
 }
 
 #map-box
 {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 #options
 {
-    border-style: dashed;
-    border-color: white;
-    height: 600px;
+   
 }
 
 #closebtn
@@ -92,7 +95,9 @@ body
 #content 
 {
     transition: margin-left 0.5s;
-    padding: 16px;
+    padding-top: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

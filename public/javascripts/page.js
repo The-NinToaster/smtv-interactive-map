@@ -28,20 +28,13 @@ function toggleNav() {
     {
         //window.alert("true");
        openalt.prepend(open);
-       placename.style.paddingTop = '30px'
+       placename.style.paddingTop = '30px';
+       open.innerText="X Close";
 
     }
     else
     {
         content.prepend(open);
+        open.innerText = "☰ Options";
     }
 }
-
-
-//====================== Leaflet.js ===================================//
-var map = L.map('map').fitWorld();
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '<a href="https://sega.co.jp/">©SEGA</a> <a href="https://www.atlus.co.jp/">©ATLUS</a>'
-}).addTo(map);
