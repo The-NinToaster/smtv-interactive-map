@@ -52,17 +52,16 @@ function loadChiyoda()
 {
 
   $(".name").attr("src", "/images/placenames/chiyoda.png");
+
   mapGroup.clearLayers();
 
   img = [
-  3780,  // original width of image (here from `example/karta.jpg`)
-  4140   // original height of image
+   4140,
+   3780
   ]
 
-  // assign map and image dimensions
   var rc = new L.RasterCoords(map, img)
-  // all coordinates need to be unprojected using the `unproject` method
-  // set the view in the lower right edge of the image
+
   map.setView(rc.unproject([img[0], img[1]]), 2)
 
   mapGroup.addLayer(maps.chiyoda);
@@ -74,20 +73,18 @@ function loadChiyoda()
 
 function loadMinato()
 {
-  
+
   $(".name").attr("src", "/images/placenames/minato.png");
 
   mapGroup.clearLayers();
 
   img = [
-  3860,  // original width of image (here from `example/karta.jpg`)
-  5766   // original height of image
+  3860,
+  5766
   ]
 
-  // assign map and image dimensions
   var rc = new L.RasterCoords(map, img)
-  // all coordinates need to be unprojected using the `unproject` method
-  // set the view in the lower right edge of the image
+
   map.setView(rc.unproject([img[0], img[1]]), 2)
 
   mapGroup.addLayer(maps.minato);
