@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "startdev": "npm run build & nodemon ./bin/www",
-    "build": "npm install & browserify map.js -o public/javascripts/map.js & cp node_modules/leaflet/dist/leaflet.css public/stylesheets/leaflet.css",
+    "build": "npm install -g express & npm install & browserify map.js -o public/javascripts/map.js & cp node_modules/leaflet/dist/leaflet.css public/stylesheets/leaflet.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d ."
   },
