@@ -15,7 +15,37 @@ var maps =
     maxZoom: 6,
     minZoom: 2,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
-  })
+  }),
+
+  "shinagawa": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Region%20Maps/shinagawa/{z}/{x}/{y}.png', {
+    maxZoom: 6,
+    minZoom: 2,
+    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
+  }),
+
+  "taito": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Region%20Maps/taito/{z}/{x}/{y}.png', {
+    maxZoom: 6,
+    minZoom: 2,
+    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
+  }),
+
+  "bethel_meeting": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Bethel/meeting/{z}/{x}/{y}.png', {
+    maxZoom: 3,
+    minZoom: 2,
+    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
+  }),
+
+ "bethel_terminal": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Bethel/terminal/{z}/{x}/{y}.png', {
+    maxZoom: 3,
+    minZoom: 2,
+    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
+  }),
+
+  "demon_king_1": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Demon%20King\'s%20Castle/1f/{z}/{x}/{y}.png', {
+    maxZoom: 4,
+    minZoom: 1,
+    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
+  }),
 
 }
 
@@ -41,10 +71,81 @@ function loadMap()
       loadChiyoda();
       break;
 
+    case "shinagawa":
+      loadShinagawa();
+      break;
+
+    case "taito":
+      loadTaito();
+      break;
+
+    case "bethel_terminal":
+      loadBethelTerminal();
+      break;
+
+    case "bethel_meeting":
+      loadBethelMeeting();
+      break;
+
+    case "bethel_terminal":
+      loadBethelTerminal();
+      break;
+
+    case "demonking_1":
+      loadDemon1f();
+      break;
+
     default:
       loadMinato();
       break;
   }
+}
+
+// ========================= REGION MAPS ==========================//
+function loadTaito()
+{
+
+  $(".name").attr("src", "/images/placenames/taito.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   4844,
+   4846
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.taito);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadShinagawa()
+{
+
+  $(".name").attr("src", "/images/placenames/shinagawa.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   4294,
+   4292
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.shinagawa);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
 }
 
 function loadChiyoda()
@@ -93,8 +194,74 @@ function loadMinato()
 
 }
 
+// ===================== BETHEL =================================//
+function loadBethelMeeting()
+{
 
+  $(".name").attr("src", "/images/placenames/bethel_meeting_room.png");
 
+  mapGroup.clearLayers();
 
+  img = [
+   605,
+   385
+  ]
 
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.bethel_meeting);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadBethelTerminal()
+{
+
+  $(".name").attr("src", "/images/placenames/bethel_terminal_room.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   628,
+   596
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.bethel_terminal);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//=================== DEMON KING'S CASTLE ======================//
+function loadDemon1f()
+{
+
+  $(".name").attr("src", "/images/placenames/demon_king_1f.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   2048,
+   2048
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.demon_king_1);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
 

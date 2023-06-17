@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="stylesheets/index.css">
         <link rel="stylesheet" href="stylesheets/leaflet.css">
         <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.js"></script>
+        <link rel="stylesheet" href="stylesheets/select2-flat-theme.css">
+
 
         <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -22,10 +26,66 @@
                     <img id="title" alt="Shin Megami Tensei V Interactive Map" src="images/title_small.png">
                 </div>
                 <div id="options">
+                    <div align="left" style="padding: 10px">
+                        <img src="images/options.png"/>
+                    </div>
                     <label>Map:</label>
-                    <select name="place" id="place">
-                        <option value="minato">Da'at Minato</option>
-                        <option value="chiyoda">Da'at Chiyoda</option>
+                    <select class="place" id="place" style="width:50%;">
+                        <optgroup label="Da'at">
+                            <option value="minato">Minato</option>
+                            <option value="chiyoda">Chiyoda</option>
+                            <option value="shinagawa">Shinagawa</option>
+                            <option value="taito">Taito</option>
+                        </optgroup>
+                            <optgroup label="Bethel ">
+                            <option value="bethel_meeting">Meeting Room</option>
+                            <option value="bethel_terminal">Terminal Room</option>
+                        </optgroup>
+                            <optgroup label="Demon King's Castle">
+                            <option value="demonking_1">Demon King's Castle 1F</option>
+                            <option value="demonking_2">Demon King's Castle 2F</option>
+                            <option value="demonking_3">Demon King's Castle 3F</option>
+                            <option value="demonking_4">Demon King's Castle 4F</option>
+                        </optgroup>
+                        <optgroup label="Jouin High School">
+                            <option value="jouin_gate">Jouin High School Gate</option>
+                            <option value="jouin_1">Jouin High School 1F</option>
+                            <option value="jouin_2">Jouin High School 2F</option>
+                        </optgroup>
+                        <optgroup label="Invaded Jouin High School">
+                            <option value="inv_jouin_gate">Invaded Jouin High School Gate</option>
+                            <option value="inv_jouin_1">Invaded Jouin High School 1F</option>
+                            <option value="inv_jouin_2">Invaded Jouin High School 2F</option>
+                            <option value="inv_jouin_3">Invaded Jouin High School 3F</option>
+                            <option value="inv_jouin_4">Invaded Jouin High School 4F</option>
+                        </optgroup>
+                        <optgroup label="Jozoji">
+                            <option value="jozoji">Jozoji</option>
+                        </optgroup>
+                         <optgroup label="Invaded Jozoji">
+                            <option value="inv_jozoji">Invaded Jozoji</option>
+                        </optgroup>
+                        <optgroup label="Temple of Eternity">
+                            <option value="temple_1f">Temple of Eternity 1F</option>
+                            <option value="temple_2f">Temple of Eternity 2F</option>
+                            <option value="temple_3f">Temple of Eternity 3F</option>
+                            <option value="temple_4f">Temple of Eternity 4F</option>
+                        </optgroup>
+                        <optgroup label="The Emperyan">
+                            <option value="emperyan">Emperyan</option>
+                            <option value="throne">Emperyan Throne Room</option>
+                        </optgroup>
+                        <optgroup label="Tokyo Diet Building">
+                            <option value="tokyo_terminal">Tokyo Diet Building Terminal</option>
+                            <option value="tokyo_building">Tokyo Diet Building</option>
+                        </optgroup>
+                        <optgroup label="Other Maps">
+                            <option value="station">Shinagawa Station</option>
+                            <option value="summit">Summit Conference Room</option>
+                        </optgroup>
+                        <optgroup label="Hall of Chaos (DLC)">
+                            <option value="chaos">Hall of Chaos</option>
+                        </optgroup>
                     </select>
                 </div>
                 </div>

@@ -1,4 +1,13 @@
 //=============================== page ===========================//
+$(document).ready(function()
+{
+    $('.place').select2(
+        {
+            theme: 'flat'
+        }
+    );
+});
+
 function toggleNav() {
 
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;

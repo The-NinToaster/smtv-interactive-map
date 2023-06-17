@@ -34,6 +34,11 @@ a
     margin-left: auto;
 }
 
+#options
+{
+    padding: 5px;
+}
+
 .sidebar 
 {
     height: 100%;
@@ -93,6 +98,12 @@ a
     padding-top: 16px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+
+#place
+{
+    color: #111;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
