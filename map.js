@@ -570,7 +570,7 @@ function loadDemon4f()
 
   map.setView(rc.unproject([img[0], img[1]]), 2)
 
-  mapGroup.addLayer(maps.demon_king_1);
+  mapGroup.addLayer(maps.demon_king_4);
 
   map.setMaxBounds(null)
 
