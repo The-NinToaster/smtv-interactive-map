@@ -107,7 +107,7 @@ var maps =
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "jozoji": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jozoji/normal/{z}/{x}/{y}.png', {
+  "jozoji": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jozoji/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
@@ -137,31 +137,31 @@ var maps =
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "emperyan": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%Emperyan/emperyan/{z}/{x}/{y}.png', {
+  "emperyan": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%20Emperyan/emperyan/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "throne": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%Emperyan/throne/{z}/{x}/{y}.png', {
+  "throne": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%20Emperyan/throne/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "tokyo_terminal": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%Diet%Building/terminal/{z}/{x}/{y}.png', {
+  "tokyo_terminal": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%20Diet%20Building/terminal/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "tokyo_building": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%Diet%Building/building/{z}/{x}/{y}.png', {
+  "tokyo_building": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%20Diet%20Building/building/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "station": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Other%20Maps/shinagawa/{z}/{x}/{y}.png', {
+  "station": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Other%20Maps/station/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
@@ -561,6 +561,8 @@ function loadDemon4f()
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
 
+//==================== JOUIN HIGH SCHOOL ========================//
+
 function loadJouinGate()
 {
 
@@ -745,6 +747,8 @@ function loadInvJouin4()
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
 
+//============================= JOZOJI ======================================//
+
 function loadJozoji()
 {
 
@@ -790,6 +794,8 @@ function loadInvJozoji()
 
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
+
+//========================== TEMPLE OF ETERNITY ==============================//
 
 function loadTemple1f()
 {
@@ -883,6 +889,8 @@ function loadTemple4f()
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
 
+//========================= THE EMPERYAN =====================================//
+
 function loadEmperyan()
 {
 
@@ -929,6 +937,8 @@ function loadThrone()
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
 
+//======================== TOKYO DIET BUILDING ==============================//
+
 function loadTokyoBuilding()
 {
 
@@ -974,6 +984,56 @@ function loadTokyoTerminal()
 
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
+
+//======================= OTHER MAPS =====================================//
+
+function loadStation()
+{
+
+  $(".name").attr("src", "/images/placenames/shinagawa_station.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   1544,
+   686
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.station);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadSummit()
+{
+
+  $(".name").attr("src", "/images/placenames/summit_conference.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   1024,
+   1024
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.summit);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//======================= HALL OF CHAOS =====================================//
 
 function loadChaos()
 {

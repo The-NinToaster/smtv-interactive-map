@@ -84,12 +84,6 @@ var maps =
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "inv_jouin_gate": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jouin%20High%20School/gate/{z}/{x}/{y}.png', {
-    maxZoom: 3,
-    minZoom: 1,
-    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
-  }),
-
   "inv_jouin_1": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jouin%20High%20School/invaded/1f/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
@@ -114,13 +108,7 @@ var maps =
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "jozoji": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jozoji/normal/{z}/{x}/{y}.png', {
-    maxZoom: 3,
-    minZoom: 1,
-    attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
-  }),
-
-  "inv_jozoji": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jozoji/invaded/{z}/{x}/{y}.png', {
+  "jozoji": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Jozoji/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
@@ -150,31 +138,31 @@ var maps =
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "emperyan": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%Emperyan/emperyan/{z}/{x}/{y}.png', {
+  "emperyan": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%20Emperyan/emperyan/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "throne": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%Emperyan/throne/{z}/{x}/{y}.png', {
+  "throne": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/The%20Emperyan/throne/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "tokyo_terminal": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%Diet%Building/terminal/{z}/{x}/{y}.png', {
+  "tokyo_terminal": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%20Diet%20Building/terminal/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "tokyo_building": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%Diet%Building/building/{z}/{x}/{y}.png', {
+  "tokyo_building": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Tokyo%20Diet%20Building/building/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
   }),
 
-  "station": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Other%20Maps/shinagawa/{z}/{x}/{y}.png', {
+  "station": L.tileLayer('https://github.com/The-NinToaster/smtv-interactive-map-tileset/raw/main/Other%20Maps/station/{z}/{x}/{y}.png', {
     maxZoom: 3,
     minZoom: 1,
     attribution: '&copy; <a href="https://www.sega.co.jp">SEGA</a>, &copy; <a href="https://www.atlus.co.jp">ATLUS</a>'
@@ -574,6 +562,8 @@ function loadDemon4f()
   setTimeout(function(){ map.invalidateSize()}, 100)
 }
 
+//==================== JOUIN HIGH SCHOOL ========================//
+
 function loadJouinGate()
 {
 
@@ -613,7 +603,7 @@ function loadInvJouinGate()
 
   map.setView(rc.unproject([img[0], img[1]]), 2)
 
-  mapGroup.addLayer(maps.inv_jouin_gate);
+  mapGroup.addLayer(maps.jouin_gate);
 
   map.setMaxBounds(null)
 
@@ -752,6 +742,317 @@ function loadInvJouin4()
   map.setView(rc.unproject([img[0], img[1]]), 2)
 
   mapGroup.addLayer(maps.inv_jouin_4);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//============================= JOZOJI ======================================//
+
+function loadJozoji()
+{
+
+  $(".name").attr("src", "/images/placenames/jozoji.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   580,
+   748
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.jozoji);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadInvJozoji()
+{
+
+  $(".name").attr("src", "/images/placenames/jozoji_invaded.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   580,
+   748
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.jozoji);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//========================== TEMPLE OF ETERNITY ==============================//
+
+function loadTemple1f()
+{
+
+  $(".name").attr("src", "/images/placenames/temple_eternity_1f.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   1634,
+   1952
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.temple_1f);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadTemple2f()
+{
+
+  $(".name").attr("src", "/images/placenames/temple_eternity_2f.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   2048,
+   2048
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.temple_2f);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadTemple3f()
+{
+
+  $(".name").attr("src", "/images/placenames/temple_eternity_3f.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   2048,
+   2048
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.temple_3f);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadTemple4f()
+{
+
+  $(".name").attr("src", "/images/placenames/temple_eternity_4f.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   728,
+   1112
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.temple_4f);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//========================= THE EMPERYAN =====================================//
+
+function loadEmperyan()
+{
+
+  $(".name").attr("src", "/images/placenames/emperyan.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   640,
+   1428
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.emperyan);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadThrone()
+{
+
+  $(".name").attr("src", "/images/placenames/emperyan_throne.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   574,
+   1160
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.throne);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//======================== TOKYO DIET BUILDING ==============================//
+
+function loadTokyoBuilding()
+{
+
+  $(".name").attr("src", "/images/placenames/tokyo_diet.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   1118,
+   644
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.tokyo_building);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadTokyoTerminal()
+{
+
+  $(".name").attr("src", "/images/placenames/tokyo_diet_terminal.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   703,
+   718
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.tokyo_terminal);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//======================= OTHER MAPS =====================================//
+
+function loadStation()
+{
+
+  $(".name").attr("src", "/images/placenames/shinagawa_station.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   1544,
+   686
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.station);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+function loadSummit()
+{
+
+  $(".name").attr("src", "/images/placenames/summit_conference.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   1024,
+   1024
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.summit);
+
+  map.setMaxBounds(null)
+
+  setTimeout(function(){ map.invalidateSize()}, 100)
+}
+
+//======================= HALL OF CHAOS =====================================//
+
+function loadChaos()
+{
+
+  $(".name").attr("src", "/images/placenames/hall_of_chaos.png");
+
+  mapGroup.clearLayers();
+
+  img = [
+   586,
+   1250
+  ]
+
+  var rc = new L.RasterCoords(map, img)
+
+  map.setView(rc.unproject([img[0], img[1]]), 2)
+
+  mapGroup.addLayer(maps.chaos);
 
   map.setMaxBounds(null)
 
