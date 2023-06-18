@@ -6,7 +6,12 @@ $(document).ready(function()
             theme: 'flat'
         }
     );
+
+    $('.place').trigger('change');
+
 });
+
+$(window).unload(function() { $('select option').remove(); });
 
 function toggleNav() {
 
